@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Registro"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/tv1"
@@ -59,6 +59,7 @@
             android:text="Fecha de nacimiento" />
 
         <EditText
+            android:lines="1"
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,9 +105,11 @@
             android:id="@+id/boton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/boton1"
             android:text="Cancelar"
-            android:background="@drawable/btnstyle"/>
+            android:background="@drawable/btnstyle"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/boton1"
+            android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>
