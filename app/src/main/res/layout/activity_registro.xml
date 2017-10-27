@@ -40,13 +40,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/apellido"
             android:layout_marginTop="10dp"
-            android:text="Nombre de usuario" />
+            android:text="Cedula" />
 
         <TextView
             android:id="@+id/tv4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ususario"
+            android:layout_below="@+id/cedula"
             android:layout_marginTop="10dp"
             android:text="Correo Electronico" />
 
@@ -71,7 +71,7 @@
             android:layout_below="@id/tv2" />
 
         <EditText
-            android:id="@+id/ususario"
+            android:id="@+id/cedula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv3" />
@@ -97,14 +97,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nacimiento"
-            android:text="Registrar" />
+            android:text="Registrar"
+            android:background="@drawable/btnstyle"/>
 
         <Button
             android:id="@+id/boton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/boton1"
-            android:text="Cancelar" />
+            android:text="Cancelar"
+            android:background="@drawable/btnstyle"/>
 
 
     </RelativeLayout>
