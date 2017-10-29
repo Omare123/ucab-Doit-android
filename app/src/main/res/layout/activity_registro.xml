@@ -1,97 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="example.omare.com.doit.Registro">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/registro"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:text="Registro"
             android:textSize="30dp" />
 
         <TextView
-            android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/registro"
             android:layout_marginTop="10dp"
             android:text="Nombre" />
-
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/nombre"
-            android:layout_marginTop="10dp"
-            android:text="Apellido" />
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/apellido"
-            android:layout_marginTop="10dp"
-            android:text="Cedula" />
-
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cedula"
-            android:layout_marginTop="10dp"
-            android:text="Correo Electronico" />
-
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/correo"
-            android:layout_marginTop="10dp"
-            android:text="Fecha de nacimiento" />
 
         <EditText
             android:lines="1"
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv1" />
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Apellido" />
 
         <EditText
+            android:lines="1"
             android:id="@+id/apellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv2" />
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cedula" />
 
         <EditText
+            android:lines="1"
             android:id="@+id/cedula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv3" />
+            />
 
-        <EditText
-            android:id="@+id/correo"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv4"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="10dp"
+            android:text="Username" />
 
         <EditText
+            android:lines="1"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fecha de nacimiento" />
+
+
+
+        <EditText
+            android:lines="1"
             android:id="@+id/nacimiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/tv5"
             android:ems="10"
             android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Contraseña" />
+
+        <EditText
+            android:id="@+id/password"
+            android:lines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/boton1"
@@ -110,8 +115,6 @@
             android:layout_marginTop="7dp"
             android:layout_below="@+id/boton1"
             android:layout_alignParentStart="true" />
+    </LinearLayout>
 
-
-    </RelativeLayout>
-
-</LinearLayout>
+</ScrollView>
