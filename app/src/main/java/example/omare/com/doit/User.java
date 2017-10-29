@@ -7,16 +7,15 @@ import java.sql.Date;
  */
 
 public class User {
-        String nombre,apellido,fechaDeNacimiento,password,username, cedula;
+        String nombre,apellido,fechaDeNacimiento,password,username;
         int formaDeRegistro;
 
-    public User(String nombre, String apellido, String fechaDeNacimiento, String password, String username, String cedula) {
+    public User(String nombre, String apellido, String fechaDeNacimiento, String password, String username) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.password = password;
         this.username = username;
-        this.cedula = cedula;
         this.formaDeRegistro = 2;
     }
 
@@ -68,13 +67,6 @@ public class User {
         this.formaDeRegistro = formaDeRegistro;
     }
 
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
 }
 
 

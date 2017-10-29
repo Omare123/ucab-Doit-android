@@ -16,7 +16,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Registro extends AppCompatActivity {
-    EditText nombre, apellido, username, fechanacimiento, cedula, password;
+    EditText nombre, apellido, username, fechanacimiento, password;
     Button boton1,boton2;
     private String baseUrl = "https://doit-api.herokuapp.com/";
 
@@ -32,7 +32,6 @@ public class Registro extends AppCompatActivity {
         apellido = (EditText) findViewById(R.id.apellido);
         username = (EditText) findViewById(R.id.username);
         fechanacimiento = (EditText) findViewById  (R.id.nacimiento);
-        cedula = (EditText) findViewById(R.id.cedula);
         password = (EditText) findViewById(R.id.password);
         boton1 = (Button) findViewById(R.id.boton1);
         boton1.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +42,7 @@ public class Registro extends AppCompatActivity {
                         apellido.getText().toString(),
                         fechanacimiento.getText().toString(),
                         password.getText().toString(),
-                        username.getText().toString(),
-                        cedula.getText().toString()
+                        username.getText().toString()
                 );
                 createAccount(user);
             }
