@@ -66,13 +66,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int check = response.code();
                 switch (check){
                     case 200:
-                        Toast.makeText(MainActivity.this, "Inicio Sesion"+response.body().getNombre(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Inicio Sesion "+response.body().getNombre(), Toast.LENGTH_SHORT).show();
                         break;
                     case 400:
-                        Toast.makeText(MainActivity.this, "Error :(", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Nombre de ususario o Contraseña incorrecta ", Toast.LENGTH_SHORT).show();
                         break;
                     default:
-                        Toast.makeText(MainActivity.this, "no sé : "+response.code(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Error : "+response.code(),Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
