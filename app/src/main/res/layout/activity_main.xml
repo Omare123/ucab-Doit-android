@@ -17,16 +17,16 @@
             android:id="@+id/tv1"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/username"
+            android:layout_below="@+id/correo"
             android:layout_marginTop="36dp"
             android:text="Contraseña"
             android:layout_centerInParent="true"/>
 
         <TextView
             android:id="@+id/tv2"
-            android:layout_width="130dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Nombre De Ususario"
+            android:text="Correo electrónico"
             android:layout_marginTop="30dp"
             android:layout_centerInParent="true"
             android:layout_alignParentTop="true"/>
@@ -52,7 +52,7 @@
             android:background="@drawable/btnstyle"/>
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -63,7 +63,7 @@
         />
 
         <EditText
-            android:id="@+id/contrasena"
+            android:id="@+id/contraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv1"
