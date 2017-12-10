@@ -1,5 +1,3 @@
-package example.omare.com.doit;
-
 /**
  * Created by Omare on 29-10-2017.
  */

@@ -7,8 +7,8 @@ import java.sql.Date;
  */
 
 public class User {
-    String nombre,apellido,fechaDeNacimiento,password,username;
-    int formaDeRegistro;
+        String nombre,apellido,fechaDeNacimiento,password,username;
+        int formaDeRegistro;
 
     public User(String nombre, String apellido, String fechaDeNacimiento, String password, String username) {
         this.nombre = nombre;
@@ -17,11 +17,6 @@ public class User {
         this.password = password;
         this.username = username;
         this.formaDeRegistro = 2;
-    }
-
-    public User(String username, String password){
-        this.username = username;
-        this.password = password;
     }
 
     public String getNombre() {
@@ -73,3 +68,5 @@ public class User {
     }
 
 }
+
+
