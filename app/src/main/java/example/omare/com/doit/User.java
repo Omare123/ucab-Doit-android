@@ -19,9 +19,9 @@ public class User {
         this.formaDeRegistro = 2;
     }
 
-    public User(String username, String password){
-        this.username = username;
+    public User(String username, String password) {
         this.password = password;
+        this.username = username;
     }
 
     public String getNombre() {
@@ -73,3 +73,5 @@ public class User {
     }
 
 }
+
+
