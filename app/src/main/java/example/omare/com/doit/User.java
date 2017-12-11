@@ -19,6 +19,11 @@ public class User {
         this.formaDeRegistro = 2;
     }
 
+    public User(String password, String username) {
+        this.password = password;
+        this.username = username;
+    }
+
     public String getNombre() {
         return nombre;
     }
