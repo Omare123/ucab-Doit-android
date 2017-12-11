@@ -7,4 +7,6 @@ import retrofit2.http.POST;
 public interface UsuarioService{
     @POST("users")
     Call<User> createAccount(@Body User user);
+    @POST("users")
+    Call<User> iniciarSesion(@Body User user);
 }
