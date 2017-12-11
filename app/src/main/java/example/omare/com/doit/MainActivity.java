@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(MainActivity.this, "Nombre de ususario o Contraseña incorrecta ", Toast.LENGTH_SHORT).show();
                         break;
                     default:
-                        Toast.makeText(MainActivity.this, "Error"+response.code(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Error "+response.code(),Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
