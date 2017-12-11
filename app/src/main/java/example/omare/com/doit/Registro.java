@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Registro extends AppCompatActivity {
     EditText nombre, apellido, username, fechanacimiento, password;
     Button boton1,boton2;
-    private String baseUrl = "https://doit-api.herokuapp.com/";
+    private String baseUrl = "https://api-doit.herokuapp.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +67,7 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 int check = response.code();
+                Toast.makeText(Registro.this, "codigo "+check, Toast.LENGTH_SHORT).show();
                 switch (check){
                     case 201:
                         Toast.makeText(Registro.this, "Usuario Creado"+response.body().getNombre(), Toast.LENGTH_SHORT).show();

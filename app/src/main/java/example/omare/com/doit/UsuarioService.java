@@ -5,6 +5,9 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface UsuarioService{
-    @POST("users")
+    @POST("users/register")
     Call<User> createAccount(@Body User user);
+
+    @POST("login")
+    Call<User> iniciarSesion(@Body User user);
 }
