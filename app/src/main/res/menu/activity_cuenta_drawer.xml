@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_menu_inicio"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_tareas"
+            android:icon="@drawable/ic_menu_tareas"
+            android:title="Tareas" />
+
+
+    </group>
+
+    <item android:title="Configuracion">
+        <menu>
+            <item
+                android:id="@+id/nav_configuracion"
+                android:icon="@drawable/ic_menu_configuracion"
+                android:title="Configuracion" />
+            <item
+                android:id="@+id/nav_cerrarsesion"
+                android:icon="@drawable/ic_menu_cerrarsesion"
+                android:title="Cerrar sesion" />
+
+        </menu>
+    </item>
+
+</menu>
