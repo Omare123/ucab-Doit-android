@@ -7,6 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton2 = (Button) findViewById(R.id.button2);
         boton2.setOnClickListener(this);
         username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.contrasena);
+        password = (EditText) findViewById(R.id.contraseña);
     }
 
     @Override
@@ -40,17 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 username.getText().toString();
                 password.getText().toString();
                 User user = new User(username.getText().toString(), password.getText().toString());
-                if(IniciarSesion(user) == 1){
-                  
-                    Intent intentCuenta = new Intent(MainActivity.this,CuentaActivity.class);
-                    startActivity(intentCuenta);
-                }
+                IniciarSesion(user);
                 break;
         }
     }
 
 
-    public int IniciarSesion(User user){
+    public void IniciarSesion(User user){
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create());
@@ -63,9 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int check = response.code();
                 switch (check){
                     case 200:
-                        Toast.makeText(MainActivity.this, "Inicio Sesion "+response.body().getNombre(), Toast.LENGTH_SHORT).show();
-                        return 1;
-                    break;
+                        Toast.makeText(MainActivity.this, "Bienvenido "+response.body().getNombre(), Toast.LENGTH_SHORT).show();
+                        Intent intentCuenta = new Intent(MainActivity.this,CuentaActivity.class);
+                        startActivity(intentCuenta);
+                        break;
                     case 400:
                         Toast.makeText(MainActivity.this, "Nombre de ususario o Contraseña incorrecta ", Toast.LENGTH_SHORT).show();
                         break;
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, "Error de servidor", Toast.LENGTH_SHORT).show();
             }
         });
-      retunr 0;
+
     }
 
 }
